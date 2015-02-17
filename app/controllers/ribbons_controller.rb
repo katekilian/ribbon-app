@@ -13,7 +13,12 @@ class RibbonsController < ApplicationController
   end
 
   def create
-    @ribbon = 
+    @ribbon = Ribbon.new(ribbon_params)
+    if @ribbon.save
+      redirect_to ribbons_path
+    else
+      render :new
+    end
   end
 
 
