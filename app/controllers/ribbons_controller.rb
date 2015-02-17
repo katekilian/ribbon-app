@@ -21,6 +21,10 @@ class RibbonsController < ApplicationController
     end
   end
 
+  def edit
+    @ribbon = Ribbon.find(params[:id])
+  end
+
 
   private
 
