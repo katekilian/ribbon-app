@@ -25,6 +25,19 @@ class RibbonsController < ApplicationController
     @ribbon = Ribbon.find(params[:id])
   end
 
+  def update
+    @ribbon = Ribbon.find(params[:id])
+    if @ribbon.update(ribbon_params)
+      redirect_to ribbon_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @ribbon = Ribbon.destroy(params[:id])
+    redirect_to ribbons_path
+  end
 
   private
 
