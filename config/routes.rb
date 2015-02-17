@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :ribbons, only: [:index, :show]
+  resources :ribbons, only: [:index, :show, :new, :create]
 
 end

@@ -1,7 +1,10 @@
+<%= link_to "Create New Ribbon Record", new_ribbon_path %>
+<br>
+<hr>
+
 <% @ribbons.each do |ribbon| %>
   <%= ribbon.name %>
   <br>
   <%= link_to "View Ribbon", ribbon_path(ribbon) %>
   <hr>
-
 <% end %>

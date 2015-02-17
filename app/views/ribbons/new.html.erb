@@ -1,0 +1,16 @@
+<%= form_for @ribbon do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+  <br>
+  <%= f.label :material %>
+  <%= f.text_field :material %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back", ribbons_path %>
+<br>
+<%=  %>
